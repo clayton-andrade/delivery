@@ -20,7 +20,7 @@ init_db:
 	FLASK_APP=delivery/app.py flask db upgrade
 
 test:
-	FLASK_ENV=test pytest tests/ -v --cov=delivery
+	pytest tests/ -v --cov=delivery
 
 format:
 	isort **/*.py
